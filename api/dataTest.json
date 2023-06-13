@@ -1,0 +1,72 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "El gran Gatsby",
+      "authorId": 1,
+      "publicationYear": 1925
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "authorId": 2,
+      "publicationYear": 1949
+    },
+    {
+      "id": 3,
+      "title": "Cien años de soledad",
+      "authorId": 3,
+      "publicationYear": 1967
+    },
+    {
+      "id": 4,
+      "title": "Matar a un ruiseñor",
+      "authorId": 4,
+      "publicationYear": 1960
+    },
+    {
+      "id": 5,
+      "title": "Don Quijote de la Mancha",
+      "authorId": 5,
+      "publicationYear": 1605
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "F. Scott Fitzgerald",
+      "birthYear": 1896,
+      "nationality": "Estadounidense"
+    },
+    {
+      "id": 2,
+      "name": "George Orwell",
+      "birthYear": 1903,
+      "nationality": "Británico"
+    },
+    {
+      "id": 3,
+      "name": "Gabriel García Márquez",
+      "birthYear": 1927,
+      "nationality": "Colombiano"
+    },
+    {
+      "id": 4,
+      "name": "Harper Lee",
+      "birthYear": 1926,
+      "nationality": "Estadounidense"
+    },
+    {
+      "id": 5,
+      "name": "Miguel de Cervantes",
+      "birthYear": 1547,
+      "nationality": "Español"
+    },
+    {
+      "name": "Jorge Luis Borges",
+      "nationality": "Argentina",
+      "birthYear": "1899",
+      "id": 6
+    }
+  ]
+}
