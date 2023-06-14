@@ -1,8 +1,6 @@
 
 import { Admin, Resource } from 'react-admin';
 
-import { Route } from "react-router-dom";
-
 import { dataProvider } from './dataProvider';
 import { authProvider } from './authProvider';
 
@@ -23,9 +21,7 @@ export const App = () => (
 		authProvider={authProvider}
         title='Biblioteca'
 	>
-        <Resource name="authors" list={AuthorsList} edit={AuthorEdit} create={AuthorCreate} />
-		<Resource name="books" list={BookList} edit={BookEdit} create={BookCreate} />
+        <Resource name="authors" list={AuthorsList} edit={AuthorEdit} create={AuthorCreate} recordRepresentation={(record) => record.name } />
+		<Resource name="books" list={BookList} edit={BookEdit} create={BookCreate} recordRepresentation={(record) => record.title }  />
     </Admin>
 );
-
-    
