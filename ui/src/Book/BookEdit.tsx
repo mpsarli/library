@@ -1,4 +1,3 @@
-import React from 'react'
 import { 
     Edit, 
     SimpleForm, 
@@ -12,13 +11,13 @@ import {
 } from 'react-admin'
 
 const validateText = [
-    required('Campo requerido'), 
-    minLength(2, 'Debe tener al menos 2 caracteres'), 
+    required(), 
+    minLength(2), 
 ]
 
 const CustomToolbar = () => (
     <Toolbar>
-        <SaveButton label='Guardar cambios' />
+        <SaveButton  />
     </Toolbar>
 )
 
@@ -28,10 +27,9 @@ const BookEdit = () => {
         <Edit>
             <SimpleForm mode="onBlur" reValidateMode="onBlur" toolbar={<CustomToolbar />}>
                 <TextInput disabled source='id' />
-                <TextInput source='title'  label='Título' validate={validateText}/>
-                <TextInput source='publicationYear'  label='Año de publicación' validate={validateText}/>
+                <TextInput source='title' validate={validateText}/>
+                <TextInput source='publicationYear' validate={validateText}/>
                 <SelectInput 
-                    label='Autor'
                     source="authorId"
                     choices={data}
                     optionText="name"

@@ -1,36 +1,26 @@
-import React from 'react'
 import { 
     Create, 
     SimpleForm, 
     TextInput, 
     minLength, 
-    required, 
-    SaveButton, 
-    Toolbar,
+    required,
     SelectInput,
     useGetList
 } from 'react-admin'
 
 const validateText = [
-    required('Campo requerido'), 
-    minLength(2, 'Debe tener al menos 2 caracteres'), 
+    required(), 
+    minLength(2), 
 ]
-
-const CustomToolbar = () => (
-    <Toolbar>
-        <SaveButton label='Guardar' />
-    </Toolbar>
-)
 
 const BookCreate = () => {
     const { data, isLoading } = useGetList('authors');
     return(
         <Create>
-            <SimpleForm mode="onBlur" reValidateMode="onBlur" toolbar={<CustomToolbar />}>
-                <TextInput source='title'  label='Título' validate={validateText}/>
-                <TextInput source='publicationYear'  label='Año de publicación' validate={validateText}/>
+            <SimpleForm mode="onBlur" reValidateMode="onBlur">
+                <TextInput source='title'validate={validateText}/>
+                <TextInput source='publicationYear'  validate={validateText}/>
                 <SelectInput 
-                    label='Autor'
                     source="authorId"
                     choices={data}
                     optionText="name"

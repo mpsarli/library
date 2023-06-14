@@ -4,28 +4,19 @@ import {
     SimpleForm, 
     TextInput, 
     minLength, 
-    required, 
-    SaveButton, 
-    Toolbar,
+    required
 } from 'react-admin'
 
 const validateText = [
-    required('Campo requerido'), 
-    minLength(2, 'Debe tener al menos 2 caracteres'), 
+    required(), 
+    minLength(2), 
 ]
-
-const CustomToolbar = () => (
-    <Toolbar>
-        <SaveButton label='Guardar' />
-    </Toolbar>
-)
-
 const AuthorCreate = () => (
     <Create>
-        <SimpleForm mode="onBlur" reValidateMode="onBlur" toolbar={<CustomToolbar />}>
-            <TextInput source='name' label='Nombre' validate={validateText}/>
-            <TextInput source='nationality' label='Nacionalidad' validate={validateText} />
-            <TextInput source='birthYear'  label='Año de nacimiento' validate={validateText}/>
+        <SimpleForm mode="onBlur" reValidateMode="onBlur" >
+            <TextInput source='name'  validate={validateText}/>
+            <TextInput source='nationality' validate={validateText} />
+            <TextInput source='birthYear' validate={validateText}/>
         </SimpleForm>
     </Create>
 )

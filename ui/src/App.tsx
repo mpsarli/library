@@ -4,7 +4,7 @@ import { Admin, Resource } from 'react-admin';
 import { dataProvider } from './dataProvider';
 import { authProvider } from './authProvider';
 
-import CustomLayout from './components/layout';
+import CustomLayout from './components/Layout';
 
 import AuthorsList from './Author/AuthorsList';
 import AuthorEdit from './Author/AuthorEdit';
@@ -19,7 +19,7 @@ export const App = () => (
         layout={CustomLayout}
         dataProvider={dataProvider}
 		authProvider={authProvider}
-        title='Biblioteca'
+        title='Library'
 	>
         <Resource name="authors" list={AuthorsList} edit={AuthorEdit} create={AuthorCreate} recordRepresentation={(record) => record.name } />
 		<Resource name="books" list={BookList} edit={BookEdit} create={BookCreate} recordRepresentation={(record) => record.title }  />

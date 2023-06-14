@@ -1,6 +1,4 @@
-import React from 'react'            
-import { Datagrid, FilterLiveSearch, List, BulkDeleteButton, TextField, TopToolbar, CreateButton, DeleteButton, EditButton, Title } from "react-admin"
-import { Card, CardContent } from '@mui/material'
+import { Datagrid, FilterLiveSearch, List, BulkDeleteButton, TopToolbar, CreateButton, DeleteButton, EditButton, FilterButton } from "react-admin"
 
 const ListView = ({
     children,
@@ -8,28 +6,25 @@ const ListView = ({
 }) => {
 
     const listFilters = [
-        <FilterLiveSearch label='Buscar' source='q' size='small' alwaysOn />,
+        <FilterLiveSearch source='q' alwaysOn />,
         ...filters
     ]
 
     const ListActions = () => (
         <TopToolbar>
-            <CreateButton label='Agregar' />
+            <FilterButton />
+            <CreateButton />
         </TopToolbar>
     )
     
     return(
-        <Card>
-            <CardContent>
-                <List filters={listFilters} actions={<ListActions />}>
-                    <Datagrid bulkActionButtons={<BulkDeleteButton mutationMode="pessimistic" />}>
-                        { children}
-                        <EditButton label=''/>
-                        <DeleteButton mutationMode="pessimistic" label=''/>
-                    </Datagrid>
-                </List>
-            </CardContent>
-        </Card>
+        <List filters={listFilters}  actions={<ListActions />} >
+            <Datagrid bulkActionButtons={<BulkDeleteButton mutationMode="pessimistic" />}>
+                { children}
+                <EditButton />
+                <DeleteButton mutationMode="pessimistic" />
+            </Datagrid>
+        </List>
     )
 }
 

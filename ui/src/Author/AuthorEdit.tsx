@@ -1,4 +1,3 @@
-import React from 'react'
 import { 
     Edit, 
     SimpleForm, 
@@ -10,13 +9,13 @@ import {
 } from 'react-admin'
 
 const validateText = [
-    required('Campo requerido'), 
-    minLength(2, 'Debe tener al menos 2 caracteres'), 
+    required(), 
+    minLength(2), 
 ]
 
 const CustomToolbar = () => (
     <Toolbar>
-        <SaveButton label='Guardar cambios' />
+        <SaveButton  />
     </Toolbar>
 )
 
