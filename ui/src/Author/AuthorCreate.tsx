@@ -4,11 +4,11 @@ import {
     SimpleForm, 
     TextInput
 } from 'react-admin'
-
+import { FormReturnActions } from '../_components/form/toolbars'
 import { validateText } from '../utils'
 
 const AuthorCreate = () => (
-    <Create>
+    <Create actions={<FormReturnActions />}>
         <SimpleForm mode="onBlur" reValidateMode="onBlur" >
             <TextInput source='name'  validate={validateText}/>
             <TextInput source='nationality' validate={validateText} />

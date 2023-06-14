@@ -3,24 +3,16 @@ import {
     SimpleForm, 
     TextInput, 
     required, 
-    SaveButton, 
-    Toolbar,
     SelectInput,
     useGetList
 } from 'react-admin'
-
+import { CustomToolbar, FormReturnActions } from '../_components/form/toolbars'
 import { validateText } from '../utils'
-
-const CustomToolbar = () => (
-    <Toolbar>
-        <SaveButton  />
-    </Toolbar>
-)
 
 const BookEdit = () => {
     const { data, isLoading } = useGetList('authors');
     return(
-        <Edit>
+        <Edit actions={<FormReturnActions />}>
             <SimpleForm mode="onBlur" reValidateMode="onBlur" toolbar={<CustomToolbar />}>
                 <TextInput disabled source='id' />
                 <TextInput source='title' validate={validateText}/>

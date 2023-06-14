@@ -6,13 +6,13 @@ import {
     SelectInput,
     useGetList
 } from 'react-admin'
-
+import { FormReturnActions } from '../_components/form/toolbars';
 import { validateText } from '../utils';
 
 const BookCreate = () => {
     const { data, isLoading } = useGetList('authors');
     return(
-        <Create>
+        <Create actions={<FormReturnActions />}>
             <SimpleForm mode="onBlur" reValidateMode="onBlur">
                 <TextInput source='title'validate={validateText}/>
                 <TextInput source='publicationYear'  validate={validateText}/>
