@@ -1,5 +1,5 @@
 import { TextField } from 'react-admin'
-import ListView from '../components/ListView'
+import ListView from '../_components/ui/ListView'
 
 const AuthorsList = () => (
     <ListView>

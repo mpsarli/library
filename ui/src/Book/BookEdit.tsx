@@ -2,7 +2,6 @@ import {
     Edit, 
     SimpleForm, 
     TextInput, 
-    minLength, 
     required, 
     SaveButton, 
     Toolbar,
@@ -10,10 +9,7 @@ import {
     useGetList
 } from 'react-admin'
 
-const validateText = [
-    required(), 
-    minLength(2), 
-]
+import { validateText } from '../utils'
 
 const CustomToolbar = () => (
     <Toolbar>

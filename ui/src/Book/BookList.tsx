@@ -1,6 +1,6 @@
 import React from 'react'
 import { TextField, ReferenceField, SelectInput, useGetList } from 'react-admin'
-import ListView from '../components/ListView'
+import ListView from '../_components/ui/ListView'
 
 const BookList = () => {
     const { data, isLoading } = useGetList('authors');

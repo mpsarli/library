@@ -2,15 +2,11 @@ import React from 'react'
 import { 
     Create, 
     SimpleForm, 
-    TextInput, 
-    minLength, 
-    required
+    TextInput
 } from 'react-admin'
 
-const validateText = [
-    required(), 
-    minLength(2), 
-]
+import { validateText } from '../utils'
+
 const AuthorCreate = () => (
     <Create>
         <SimpleForm mode="onBlur" reValidateMode="onBlur" >

@@ -2,16 +2,12 @@ import {
     Create, 
     SimpleForm, 
     TextInput, 
-    minLength, 
     required,
     SelectInput,
     useGetList
 } from 'react-admin'
 
-const validateText = [
-    required(), 
-    minLength(2), 
-]
+import { validateText } from '../utils';
 
 const BookCreate = () => {
     const { data, isLoading } = useGetList('authors');
