@@ -12,6 +12,7 @@
 
 - Crear, modificar y listar autores; podrás realizar búsquedas por cualquiera de sus campos (nombre, año de nacimiento y nacionalidad)
 - Crear, modificar y listar libros; podrás realizar búsquedas por cualquiera de sus campos (titulo, año de publicación y autor)
+- Los libros podrán ser filtrados por usuario, desde un selector que permitirá elegir uno entre todos los existentes.
 
 ## Hacer correr el programa en tu maquina
 

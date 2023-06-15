@@ -3,7 +3,7 @@ import { Datagrid, FilterLiveSearch, List, BulkDeleteButton, TopToolbar, CreateB
 
 interface ListViewProps {
     children: React.ReactNode,
-    filters?: React.ReactNode[]
+    filters?: React.ReactElement<any, string | React.JSXElementConstructor<any>>[] | undefined
 }
 const ListView = ({
     children,
